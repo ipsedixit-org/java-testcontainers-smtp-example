@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  mock-smtp:
+    image: linagora/mock-smtp-server:0.5
+    ports:
+      - 25
+      - 8000
+    networks:
+      - net-mock-smtp
+
+networks:
+  net-mock-smtp:
+    driver: bridge
